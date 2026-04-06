@@ -120,15 +120,6 @@ UPSERT STORES_DATA VALUES ("dev_server", "logs_db")
 cd backend
 npm install
 ```
-
-Create `backend/.env`:
-```
-PORT=5000
-TG_HOST=https://your-workspace.i.tgcloud.io
-TG_APIKEY=your_api_key_here
-TG_GRAPH=CyberGraph
-```
-
 ```bash
 node server.js
 ```
