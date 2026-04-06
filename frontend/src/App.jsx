@@ -11,7 +11,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/graph")
+    axios.get("https://cyber-sentinal-first-production.up.railway.app/api/graph")
       .then(r => setGraphData(r.data))
       .catch(() => console.log("Backend se data nahi aaya"));
   }, []);
@@ -20,7 +20,7 @@ export default function App() {
     if (!selectedNode) return alert("Please select a node from the graph first!");
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/simulate", {
+      const res = await axios.post("https://cyber-sentinal-first-production.up.railway.app/api/simulate", {
         nodeId: selectedNode.id
       });
       setAttackPaths(res.data);
